@@ -1,8 +1,8 @@
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import * as React from "react";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import * as React from 'react'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
 import styles from './Footer.module.scss'
 
 function Copyright(props: any) {
@@ -15,37 +15,29 @@ function Copyright(props: any) {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-  );
+  )
 }
 
 const footers = [
   {
     title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
+    description: ['Team', 'History', 'Contact us', 'Locations']
   },
   {
     title: 'Features',
-    description: [
-      'Cool stuff',
-      'Random feature',
-      'Team feature',
-      'Developer stuff',
-      'Another one',
-    ],
+    description: ['Cool stuff', 'Random feature', 'Team feature', 'Developer stuff', 'Another one']
   },
   {
     title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+    description: ['Resource', 'Resource name', 'Another resource', 'Final resource']
   },
   {
     title: 'Legal',
-    description: ['Privacy policy', 'Terms of use'],
-  },
-];
+    description: ['Privacy policy', 'Terms of use']
+  }
+]
 
-interface Props {
-
-}
+interface Props {}
 
 const Footer = ({}: Props) => {
   return (
@@ -55,7 +47,7 @@ const Footer = ({}: Props) => {
       sx={{
         borderTop: (theme) => `1px solid ${theme.palette.divider}`,
         mt: 8,
-        py: [3, 6],
+        py: [3, 6]
       }}
     >
       <Grid container spacing={4} justifyContent="space-evenly">
@@ -76,7 +68,7 @@ const Footer = ({}: Props) => {
           </Grid>
         ))}
       </Grid>
-      <Copyright sx={{mt: 5}}/>
+      <Copyright sx={{ mt: 5 }} />
     </Container>
   )
 }
