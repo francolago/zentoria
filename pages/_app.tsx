@@ -1,31 +1,116 @@
-import * as React from 'react'
-import { AppProps } from 'next/app'
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { CacheProvider, EmotionCache } from '@emotion/react'
-import theme from '../src/theme'
-import createEmotionCache from '../src/createEmotionCache'
-import Footer from '../components/Footer/Footer'
-import NavBar from '../components/NavBar/NavBar'
+import 'swiper/css'
+import 'swiper/css/bundle'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache()
+import { AppProps } from 'next/dist/shared/lib/router/router'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { ColorModeScript } from 'nextjs-color-mode'
+import React, { PropsWithChildren } from 'react'
+import { TinaEditProvider } from 'tinacms/dist/edit-state'
 
-interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache
-}
+import Footer from 'components/Footer'
+import { GlobalStyle } from 'components/GlobalStyles'
+import Navbar from 'components/Navbar'
+import NavigationDrawer from 'components/NavigationDrawer'
+import NewsletterModal from 'components/NewsletterModal'
+import WaveCta from 'components/WaveCta'
+import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context'
+import { NavItems } from 'types'
+import FloatingWhatsApp from 'react-floating-whatsapp'
+import styled from 'styled-components';
 
-export default function MyApp(props: MyAppProps) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+const navItems: NavItems = [
+  { title: 'Awesome SaaS Features', href: '/features' },
+  { title: 'Pricing', href: '/pricing' },
+  { title: 'Contact', href: '/contact' },
+  { title: 'Sign up', href: '/sign-up', outlined: true },
+]
+
+const TinaCMS = dynamic(() => import('tinacms'), { ssr: false })
+
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <NavBar />
-        <Component {...pageProps} />
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        {/* <link rel="alternate" type="application/rss+xml" href={EnvVars.URL + 'rss'} title="RSS 2.0" /> */}
+        {/* <script
+          dangerouslySetInnerHTML={{
+            __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+          ga('create', 'UA-117119829-1', 'auto');
+          ga('send', 'pageview');`,
+          }}
+        /> */}
+        {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
+      </Head>
+      <ColorModeScript />
+      <GlobalStyle />
+
+      <Providers>
+        <Modals />
+        <Navbar items={navItems} />
+        <TinaEditProvider
+          editMode={
+            <TinaCMS
+              query={pageProps.query}
+              variables={pageProps.variables}
+              data={pageProps.data}
+              isLocalClient={!process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
+              branch={process.env.NEXT_PUBLIC_EDIT_BRANCH}
+              clientId={process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
+              {...pageProps}
+            >
+              {(livePageProps: any) => <Component {...livePageProps} />}
+            </TinaCMS>
+          }
+        >
+          <Floating>
+            <FloatingWhatsApp
+              phoneNumber="+5491134482240"
+              accountName="Matías Lorenzo"
+              statusMessage="Usualmente responde en menos de 1 hora"
+              chatMessage="Buenos días! Cómo podemos ayudarte?"
+              placeholder="Buenas! Quiero asesoramiento en..."
+              notification={true}
+              notificationSound={true}
+              avatar="mati.png"
+            />
+          </Floating>
+          <Component styles={{zIndex: "-999"}} {...pageProps} />
+        </TinaEditProvider>
+        <WaveCta />
         <Footer />
-      </ThemeProvider>
-    </CacheProvider>
+      </Providers>
+    </>
   )
 }
+
+const Floating = styled.div`
+  z-index: 9;
+  position: fixed;
+  .custom-class {
+    z-index: 9;
+  }
+`
+
+function Providers<T>({ children }: PropsWithChildren<T>) {
+  return (
+    <NewsletterModalContextProvider>
+      <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
+    </NewsletterModalContextProvider>
+  )
+}
+
+function Modals() {
+  const { isModalOpened, setIsModalOpened } = useNewsletterModalContext()
+  if (!isModalOpened) {
+    return null
+  }
+  return <NewsletterModal onClose={() => setIsModalOpened(false)} />
+}
+
+export default MyApp

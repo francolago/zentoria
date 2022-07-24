@@ -1,113 +1,95 @@
-import * as React from 'react'
-import type { NextPage } from 'next'
-import GlobalStyles from '@mui/material/GlobalStyles'
-import CssBaseline from '@mui/material/CssBaseline'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import CardActions from '@mui/material/CardActions'
-import Button from '@mui/material/Button'
-import styles from './index.module.scss'
-import FloatingWhatsApp from 'react-floating-whatsapp'
+import { InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
+import styled from 'styled-components'
+import BasicSection from 'components/BasicSection'
+import Link from 'components/Link'
+import { EnvVars } from 'env'
+import { getAllPosts } from 'utils/postsFetcher'
+import Cta from 'views/HomePage/Cta'
+import Features from 'views/HomePage/Features'
+import FeaturesGallery from 'views/HomePage/FeaturesGallery'
+import Hero from 'views/HomePage/Hero'
+import Partners from 'views/HomePage/Partners'
+import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts'
+import Testimonials from 'views/HomePage/Testimonials'
 
-const buttonVariant = 'contained' // or outlined
-
-const tiers = [
-  {
-    title: 'Monotributistas',
-    description: ['Inscripción', 'Recategorización', 'Facturación', 'Asistencia contable'],
-    buttonText: 'Ver más',
-    buttonVariant: buttonVariant
-  },
-  {
-    title: 'Responsables Inscriptos',
-    description: ['Inscripción', 'Declaraciones Juradas', 'Asistencia contable'],
-    buttonText: 'Ver más',
-    buttonVariant: buttonVariant
-  },
-  {
-    title: 'Empresas',
-    description: ['Creación de S.A. y S.R.L.', 'Impuestos y Balances', 'ganancias', 'Asistencia contable'],
-    buttonText: 'Ver más',
-    buttonVariant: buttonVariant
-  },
-  {
-    title: 'Sueldos',
-    description: ['Recibos de sueldo', 'Formulario 931 mensual', 'Asesoría + novedades', 'Libro de sueldos digital'],
-    buttonText: 'Ver más',
-    buttonVariant: buttonVariant
-  }
-]
-
-const Home: NextPage = () => {
+export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-      <div>
-        <FloatingWhatsApp
-          phoneNumber="+5491134482240"
-          accountName="Matías Lorenzo"
-          statusMessage="Usualmente responde en menos de 1 hora"
-          chatMessage="Buenos días! Cómo podemos ayudarte?"
-          placeholder="Buenas! Quiero asesoramiento en..."
-          notification={true}
-          notificationSound={true}
-          avatar="mati.png"
+      <Head>
+        <title>{EnvVars.SITE_NAME}</title>
+        <meta
+          name="description"
+          content="Tempor nostrud velit fugiat nostrud duis incididunt Lorem deserunt est tempor aute dolor ad elit."
         />
-      </div>
-      <CssBaseline />
-      {/* Hero unit */}
-      <Container disableGutters maxWidth="md" component="main" sx={{ pt: 8, pb: 6 }}>
-        <Typography component="h1" variant="h1" align="center" color="text.primary" gutterBottom>
-          Estudio Contable Lorenzo
-        </Typography>
-        <Typography variant="h3" align="center" color="text.secondary" component="p">
-          Tus impuestos en manos de expertos
-        </Typography>
-      </Container>
-      {/* End hero unit */}
-      <Container maxWidth="lg" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            <Grid item key={tier.title} xs={12} sm={12} md={6} lg={3} className={styles.grid}>
-              <Card className={styles.card}>
-                <CardHeader
-                  className={styles.cardHeader}
-                  title={tier.title}
-                  titleTypographyProps={{ align: 'center' }}
-                  action={null}
-                  subheaderTypographyProps={{
-                    align: 'center'
-                  }}
-                  sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'light' ? theme.palette.grey[200] : theme.palette.grey[700]
-                  }}
-                />
-                <CardContent>
-                  <ul>
-                    {tier.description.map((line) => (
-                      <Typography component="li" variant="subtitle1" align="center" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button className={styles.button} fullWidth variant={tier.buttonVariant as 'outlined' | 'contained'}>
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      </Head>
+      <HomepageWrapper>
+        <WhiteBackgroundContainer>
+          <Hero />
+          <Partners />
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Lorem ipsum dolor sit amet consectetur." overTitle="sit amet gogo">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
+              voluptate quo deleniti animi laboriosam.{' '}
+              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
+              at suscipit quis est soluta?
+            </p>
+          </BasicSection>
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="Lorem ipsum dolor sit." overTitle="lorem ipsum" reversed>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore{' '}
+              <strong>voluptate quo deleniti animi laboriosam</strong>. Possimus ullam velit rem itaque consectetur, in distinctio?
+            </p>
+            <ul>
+              <li>Professional point 1</li>
+              <li>Professional remark 2</li>
+              <li>Professional feature 3</li>
+            </ul>
+          </BasicSection>
+        </WhiteBackgroundContainer>
+        <DarkerBackgroundContainer>
+          <Cta />
+          <FeaturesGallery />
+          <Features />
+          <Testimonials />
+          <ScrollableBlogPosts posts={posts} />
+        </DarkerBackgroundContainer>
+      </HomepageWrapper>
     </>
   )
 }
 
-export default Home
+const HomepageWrapper = styled.div`
+  & > :last-child {
+    margin-bottom: 15rem;
+  }
+`
+
+const DarkerBackgroundContainer = styled.div`
+  background: rgb(var(--background));
+
+  & > *:not(:first-child) {
+    margin-top: 15rem;
+  }
+`
+
+const WhiteBackgroundContainer = styled.div`
+  background: rgb(var(--secondBackground));
+
+  & > :last-child {
+    padding-bottom: 15rem;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: 15rem;
+  }
+`
+
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: await getAllPosts(),
+    },
+  }
+}
