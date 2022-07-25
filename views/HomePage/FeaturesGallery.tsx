@@ -10,25 +10,25 @@ import { media } from 'utils/media'
 
 const TABS = [
   {
-    title: 'Find relevant media contacts - multiline title',
+    title: 'Asesoramiento Contable',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>Llevamos la contabilidad de su empresa. Nuestra función es medir y analizar la situación económica de su empresa con el objetivo de mejorar la gestión de la sociedad.</p>',
     imageUrl: '/demo-illustration-3.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Another amazing feature',
+    title: 'Asesoramiento Impositivo',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>Ayudamos a nuestros clientes a adoptar las formas y estructuras que les permitan operar con los menores costos impositivos dentro del marco legal disponible.</p>',
     imageUrl: '/demo-illustration-4.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'And yet... another truly fascinating feature',
+    title: 'Sueldos y Jornales',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>Brindamos un asesoramiento integral o parcial dependiendo de las necesidades del cliente para acompañarlo en el proceso de liquidación de sueldos y jornales de sus empleados.</p>',
     imageUrl: '/demo-illustration-5.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
@@ -76,8 +76,8 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        <OverTitle>Servicios</OverTitle>
+        <SectionTitle>¿Qué ofrecemos?</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

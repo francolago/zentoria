@@ -7,6 +7,7 @@ import HeroIllustration from 'components/HeroIllustation'
 import OverTitle from 'components/OverTitle'
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context'
 import { media } from 'utils/media'
+import React from 'react';
 
 export default function Hero() {
   const { setIsModalOpened } = useNewsletterModalContext()
@@ -14,19 +15,24 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>El mejor estudio contable de San Miguel</CustomOverTitle>
+        <Heading>Simplificá tu contabilidad</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          Somos un estudio contable impositivo integral, orientado a actividades desarrolladas por empresas unipersonales, sociedades,
+          monotributistas, asociaciones sin fines de lucro, fundaciones, fideicomisos y constructoras.
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
-          </Button>
-          <NextLink href="#whitepaper" passHref>
+          {/*<Button onClick={() => setIsModalOpened(true)}>*/}
+          {/*  Subscribe to the newsletter <span>&rarr;</span>*/}
+          {/*</Button>*/}
+          <NextLink href="#contacto" passHref>
+            <Button>
+              Contactanos <span>&rarr;</span>
+            </Button>
+          </NextLink>
+          <NextLink href="#servicios" passHref>
             <Button transparent>
-              Features <span>&rarr;</span>
+              Servicios <span>&rarr;</span>
             </Button>
           </NextLink>
         </CustomButtonGroup>
