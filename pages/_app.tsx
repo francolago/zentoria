@@ -19,13 +19,13 @@ import WaveCta from 'components/WaveCta'
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context'
 import { NavItems } from 'types'
 import FloatingWhatsApp from 'react-floating-whatsapp'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const navItems: NavItems = [
   { title: 'Awesome SaaS Features', href: '/features' },
   { title: 'Pricing', href: '/pricing' },
   { title: 'Contact', href: '/contact' },
-  { title: 'Sign up', href: '/sign-up', outlined: true },
+  { title: 'Sign up', href: '/sign-up', outlined: true }
 ]
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false })
@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               avatar="mati.png"
             />
           </Floating>
-          <Component styles={{zIndex: "-999"}} {...pageProps} />
+          <Component {...pageProps} />
         </TinaEditProvider>
         <WaveCta />
         <Footer />

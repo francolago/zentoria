@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share'
+import { FacebookIcon, LinkedinIcon, TwitterIcon, WhatsappIcon } from 'react-share'
 import styled from 'styled-components'
 import Container from 'components/Container'
 import { media } from 'utils/media'
@@ -11,39 +11,39 @@ type FooterItems = SingleFooterList[]
 
 const footerItems: FooterItems = [
   {
-    title: 'Company',
+    title: 'Productos',
     items: [
-      { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Cookies Policy', href: '/cookies-policy' },
+      { title: 'Servicios', href: '/features' },
+      { title: 'Promociones', href: '/promociones' },
+      { title: 'Algo', href: '/algo' },
+      { title: 'Algo más', href: '/algo-mas' },
     ],
   },
   {
-    title: 'Product',
-    items: [
-      { title: 'Features', href: '/features' },
-      { title: 'Something', href: '/something' },
-      { title: 'Something else', href: '/something-else' },
-      { title: 'And something else', href: '/and-something-else' },
-    ],
-  },
-  {
-    title: 'Knowledge',
+    title: 'Conocenos',
     items: [
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact', href: '/contact' },
+      { title: 'Contacto', href: '/contact' },
       { title: 'FAQ', href: '/faq' },
-      { title: 'Help Center', href: '/help-center' },
+      { title: 'Centro de ayuda', href: '/help-center' },
     ],
   },
   {
-    title: 'Something',
+    title: 'Redes sociales',
     items: [
-      { title: 'Features2', href: '/features2' },
-      { title: 'Something2', href: '/something2' },
-      { title: 'Something else2', href: '/something-else2' },
-      { title: 'And something else2', href: '/and-something-else2' },
+      { title: 'Facebook', href: '/Facebook' },
+      { title: 'Instagram', href: '/Instagram' },
+      { title: 'Twitter', href: '/Twitter' },
+      { title: 'Email', href: '/Email' },
     ],
   },
+  {
+    title: 'Administrativo',
+    items: [
+      { title: 'Política de privacidad', href: '/privacy-policy' },
+      { title: 'Política de cookies', href: '/cookies-policy' },
+    ],
+  }
 ]
 
 export default function Footer() {
@@ -57,25 +57,27 @@ export default function Footer() {
         </ListContainer>
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
+            <NextLink
+              href="https://api.whatsapp.com/send/?phone=+5491134482240&text=Buenos%20d%C3%ADas!%20Quisiera%20asesoramiento%20sobre"
+              passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <WhatsappIcon size={60} round={true} />
               </a>
             </NextLink>
 
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
+            <NextLink href="https://www.facebook.com/Lorenzoyasoc" passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <FacebookIcon size={60} round={true} />
               </a>
             </NextLink>
 
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
-                <LinkedinIcon size={50} round={true} />
+            <NextLink href="https://www.linkedin.com/company/lorenzo-y-asociados-sa" passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <LinkedinIcon size={60} round={true} />
               </a>
             </NextLink>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
+          <Copyright>&copy; Copyright 2022 Lorenzo y Asociados S.A.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
@@ -97,7 +99,7 @@ function ListItem({ title, href }: SingleFooterListItem) {
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        <a target="_blank" rel="noopener noreferrer">{title}</a>
       </NextLink>
     </ListItemWrapper>
   )

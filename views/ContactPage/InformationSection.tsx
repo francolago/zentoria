@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export default function InformationSection() {
   return (
     <Wrapper>
-      <h3>Contact Info</h3>
+      <h3>Información de contacto</h3>
       <p>
-        <span>Email:</span> support@myawesomesaas.com
+        <span>Email:</span> administracion@estudiolorenzoasoc.com
       </p>
     </Wrapper>
   )
