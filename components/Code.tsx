@@ -14,13 +14,13 @@ export interface CodeProps {
 }
 
 export default function Code({
-  code,
-  language = 'javascript',
-  selectedLines = [],
-  withCopyButton = true,
-  withLineNumbers,
-  caption,
-}: CodeProps) {
+                               code,
+                               language = 'javascript',
+                               selectedLines = [],
+                               withCopyButton = true,
+                               withLineNumbers,
+                               caption,
+                             }: CodeProps) {
   const { copy, copied } = useClipboard({
     copiedTimeout: 600,
   })

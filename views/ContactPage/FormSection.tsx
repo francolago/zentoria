@@ -7,9 +7,9 @@ import { media } from 'utils/media'
 import MailSentState from '../../components/MailSentState'
 
 interface EmailPayload {
-  name: string
-  email: string
-  description: string
+  // name: string
+  // email: string
+  // description: string
 }
 
 export default function FormSection() {
@@ -47,36 +47,35 @@ export default function FormSection() {
     return <MailSentState />
   }
 
-  return (
-    <Wrapper>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        {hasErrored && <ErrorMessage>El email no ha podido ser enviado, por favor vuelva a intentarlo más tarde.</ErrorMessage>}
-        <InputGroup>
-          <InputStack>
-            {errors.name && <ErrorMessage>Nombre es requerido</ErrorMessage>}
-            <Input placeholder="Su nombre" id="name" disabled={isDisabled} {...register('name', { required: true })} />
-          </InputStack>
-          <InputStack>
-            {errors.email && <ErrorMessage>Email es requerido</ErrorMessage>}
-            <Input placeholder="Su email" id="email" disabled={isDisabled} {...register('email', { required: true })} />
-          </InputStack>
-        </InputGroup>
+  return <Wrapper>
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      {hasErrored &&
+        <ErrorMessage>El email no ha podido ser enviado, por favor vuelva a intentarlo más tarde.</ErrorMessage>}
+      <InputGroup>
         <InputStack>
-          {errors.description && <ErrorMessage>Descripción es requerida</ErrorMessage>}
-          <Textarea
-            as="textarea"
-            placeholder="Aquí su mensaje..."
-            id="description"
-            disabled={isDisabled}
-            {...register('description', { required: true })}
-          />
+          {errors.name && <ErrorMessage>Nombre es requerido</ErrorMessage>}
+          <Input placeholder="Su nombre" id="name" disabled={isDisabled} {...register('name', { required: true })} />
         </InputStack>
-        <Button as="button" type="submit" disabled={isSubmitDisabled}>
-          Enviar mensaje
-        </Button>
-      </Form>
-    </Wrapper>
-  )
+        <InputStack>
+          {errors.email && <ErrorMessage>Email es requerido</ErrorMessage>}
+          <Input placeholder="Su email" id="email" disabled={isDisabled} {...register('email', { required: true })} />
+        </InputStack>
+      </InputGroup>
+      <InputStack>
+        {errors.description && <ErrorMessage>Descripción es requerida</ErrorMessage>}
+        <Textarea
+          as="textarea"
+          placeholder="Aquí su mensaje..."
+          id="description"
+          disabled={isDisabled}
+          {...register('description', { required: true })}
+        />
+      </InputStack>
+      <Button as="button" type="submit" disabled={isSubmitDisabled}>
+        Enviar mensaje
+      </Button>
+    </Form>
+  </Wrapper>
 }
 
 const Wrapper = styled.div`
