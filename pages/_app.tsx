@@ -22,10 +22,9 @@ import FloatingWhatsApp from 'react-floating-whatsapp'
 import styled from 'styled-components'
 
 const navItems: NavItems = [
-  { title: 'Awesome SaaS Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Contact', href: '/contact' },
-  { title: 'Sign up', href: '/sign-up', outlined: true }
+  { title: 'Inicio', href: '/' },
+  { title: 'Servicios', href: '/features' },
+  { title: 'Contacto', href: '/contact' }
 ]
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false })
