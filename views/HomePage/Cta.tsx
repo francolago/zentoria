@@ -19,12 +19,12 @@ export default function Cta() {
             Contactanos por whatsapp, por teléfono, por email o por cualquiera de nuestras redes sociales
           </Description>
           <ButtonGroup>
-            <NextLink href="#contacto" passHref>
+            <NextLink href="contact" passHref>
               <Button>
                 Contactanos <span>&rarr;</span>
               </Button>
             </NextLink>
-            <NextLink href="#servicios" passHref>
+            <NextLink href="features" passHref>
               <OutlinedButton transparent>
                 Servicios <span>&rarr;</span>
               </OutlinedButton>

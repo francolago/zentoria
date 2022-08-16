@@ -25,12 +25,12 @@ export default function Hero() {
           {/*<Button onClick={() => setIsModalOpened(true)}>*/}
           {/*  Subscribe to the newsletter <span>&rarr;</span>*/}
           {/*</Button>*/}
-          <NextLink href="#contacto" passHref>
+          <NextLink href="contact" passHref>
             <Button>
               Contactanos <span>&rarr;</span>
             </Button>
           </NextLink>
-          <NextLink href="#servicios" passHref>
+          <NextLink href="features" passHref>
             <Button transparent>
               Servicios <span>&rarr;</span>
             </Button>
