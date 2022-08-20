@@ -7,32 +7,25 @@ import Container from 'components/Container'
 import { media } from 'utils/media'
 
 const PARTNER_LOGOS = [
-  'ORV.jpeg',
-  'amb-seguros.jpeg',
-  'american-implant.jpeg',
-  'cutmax.jpeg',
-  'dar-te.jpeg',
-  'delta.jpeg',
-  'di-bona.jpeg',
-  'emilio-vernet.jpeg',
-  'engra-tec.jpeg',
-  'ermap.jpeg',
-  'graciela-barrios.jpeg',
-  'gud-bike.jpeg',
-  'impianti.jpeg',
-  'jasper.jpeg',
+  'Dartee.png',
+  'Delta.png',
+  'Ermap .png',
+  'FP INGENIERIA.png',
+  'GudD BIKE.png',
   'la raquel.jpeg',
   'landi.jpeg',
-  'las zainas.jpeg',
+  'Las Zainas.png',
   'navajas.jpeg',
-  'novapallets.jpeg',
-  'pakko-fiesta.jpeg',
-  'pakko.jpeg',
-  'papel-group.jpeg',
-  'pizza uno.jpeg',
-  'puerto seco.jpeg',
-  'roll-pro.jpeg',
-  'seguras.jpeg',
+  'ORV.jpeg',
+  'PAKKO.png',
+  'PAPEL ZONE.png',
+  'Pakki.png',
+  'Pizza uno.png',
+  'americna implant.png',
+  'bulk gytm.png',
+  'di bona.png',
+  'puerto sc.png',
+  'seguras.jpeg'
 ]
 
 export default function Partners() {
@@ -42,12 +35,12 @@ export default function Partners() {
       <Swiper
         modules={[Autoplay]}
         slidesPerView={6}
-        spaceBetween={30}
+        spaceBetween={20}
         loop={true}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          pauseOnMouseEnter: true,
           waitForTransition: false,
           stopOnLastSlide: false,
         }}
@@ -79,6 +72,7 @@ const Title = styled.h3`
   line-height: 0;
   text-transform: uppercase;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   text-align: center;
   opacity: 0.8;
 

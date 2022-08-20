@@ -11,7 +11,7 @@ import Button from './Button'
 import Container from './Container'
 import Drawer from './Drawer'
 import { HamburgerIcon } from './HamburgerIcon'
-import Logo from './Logo'
+import Image from 'next/image'
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false })
 
@@ -69,7 +69,7 @@ export default function Navbar({ items }: NavbarProps) {
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Logo />
+            <Image alt="logo lorenzo" src="/logo-lorenzo-letras-derecha.png" width={260} height={130} />
           </LogoWrapper>
         </NextLink>
         <NavItemList>

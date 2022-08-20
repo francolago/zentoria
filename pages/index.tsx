@@ -5,7 +5,6 @@ import BasicSection from 'components/BasicSection'
 import { EnvVars } from 'env'
 import { getAllPosts } from 'utils/postsFetcher'
 import Cta from 'views/HomePage/Cta'
-import Features from 'views/HomePage/Features'
 import FeaturesGallery from 'views/HomePage/FeaturesGallery'
 import Hero from 'views/HomePage/Hero'
 import Partners from 'views/HomePage/Partners'
@@ -45,7 +44,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
           <Cta />
           <Testimonials />
           <FeaturesGallery />
-          <Features />
+          {/*<Features />*/}
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
@@ -68,6 +67,18 @@ const DarkerBackgroundContainer = styled.div`
 
 const WhiteBackgroundContainer = styled.div`
   background: rgb(var(--secondBackground));
+
+  & > :last-child {
+    padding-bottom: 15rem;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: 15rem;
+  }
+`
+
+const GreyBackgroundContainer = styled.div`
+  background: rgb(255, 255, 255);
 
   & > :last-child {
     padding-bottom: 15rem;

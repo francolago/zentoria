@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
         {/* <link rel="alternate" type="application/rss+xml" href={EnvVars.URL + 'rss'} title="RSS 2.0" /> */}
         {/* <script
           dangerouslySetInnerHTML={{
@@ -70,13 +70,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Floating>
             <FloatingWhatsApp
               phoneNumber="+5491134482240"
-              accountName="Matías Lorenzo"
+              accountName="Estudio Lorenzo"
               statusMessage="Usualmente responde en menos de 1 hora"
               chatMessage="Buenos días! Cómo podemos ayudarte?"
               placeholder="Buenas! Quiero asesoramiento en..."
               notification={true}
-              notificationSound={true}
-              avatar="mati.png"
+              notificationSound={false}
+              avatar="logo-lorenzo-letras-abajo-blanco.png"
             />
           </Floating>
           <Component {...pageProps} />

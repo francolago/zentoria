@@ -50,11 +50,11 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <ListContainer>
-          {footerItems.map((singleItem) => (
-            <FooterList key={singleItem.title} {...singleItem} />
-          ))}
-        </ListContainer>
+        {/*<ListContainer>*/}
+        {/*  {footerItems.map((singleItem) => (*/}
+        {/*    <FooterList key={singleItem.title} {...singleItem} />*/}
+        {/*  ))}*/}
+        {/*</ListContainer>*/}
         <BottomBar>
           <ShareBar>
             <NextLink
