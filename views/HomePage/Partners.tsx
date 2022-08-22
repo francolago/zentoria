@@ -5,27 +5,87 @@ import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Container from 'components/Container'
 import { media } from 'utils/media'
+import NextLink from 'next/link';
 
-const PARTNER_LOGOS = [
-  'Dartee.png',
-  'Delta.png',
-  'Ermap .png',
-  'FP INGENIERIA.png',
-  'GudD BIKE.png',
-  'la raquel.jpeg',
-  'landi.jpeg',
-  'Las Zainas.png',
-  'navajas.jpeg',
-  'ORV.jpeg',
-  'PAKKO.png',
-  'PAPEL ZONE.png',
-  'Pakki.png',
-  'Pizza uno.png',
-  'americna implant.png',
-  'bulk gytm.png',
-  'di bona.png',
-  'puerto sc.png',
-  'seguras.jpeg'
+type Partner = { imageUrl: string; href: string }
+
+const partners: Partner[] = [
+  {
+    "imageUrl": "Dartee.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "Delta.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "Ermap .png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "FP INGENIERIA.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "GudD BIKE.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "la raquel.jpeg",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "landi.jpeg",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "Las Zainas.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "navajas.jpeg",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "ORV.jpeg",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "PAKKO.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "PAPEL ZONE.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "Pakki.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "Pizza uno.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "americna implant.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "bulk gytm.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "di bona.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "puerto sc.png",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
+  {
+    "imageUrl": "seguras.jpeg",
+    "href": "https://www.estudiolorenzoasoc.com"
+  },
 ]
 
 export default function Partners() {
@@ -52,9 +112,16 @@ export default function Partners() {
         }}
         className="swiper-wrapper"
       >
-        {PARTNER_LOGOS.map((logo) => (
-          <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
+        {partners.map((partner) => (
+          <SwiperSlide key={partner.imageUrl}>
+            <NextLink
+              href={partner.href}
+              passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <NextImage src={'/partners/' + partner.imageUrl} alt={normalizePartnerLogoName(partner.imageUrl)} width={128} height={128} />
+              </a>
+            </NextLink>
+
           </SwiperSlide>
         ))}
       </Swiper>
