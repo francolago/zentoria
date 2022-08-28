@@ -42,8 +42,8 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
           <Cta />
-          <Testimonials />
           <FeaturesGallery />
+          <Testimonials />
           {/*<Features />*/}
         </DarkerBackgroundContainer>
       </HomepageWrapper>
@@ -67,18 +67,6 @@ const DarkerBackgroundContainer = styled.div`
 
 const WhiteBackgroundContainer = styled.div`
   background: rgb(var(--secondBackground));
-
-  & > :last-child {
-    padding-bottom: 15rem;
-  }
-
-  & > *:not(:first-child) {
-    margin-top: 15rem;
-  }
-`
-
-const GreyBackgroundContainer = styled.div`
-  background: rgb(255, 255, 255);
 
   & > :last-child {
     padding-bottom: 15rem;
