@@ -91,7 +91,7 @@ const partners: Partner[] = [
 export default function Partners() {
   return (
     <PartnersWrapper>
-      <Title>Asociados más populares</Title>
+      <Title>Nuestros asociados</Title>
       <Swiper
         modules={[Autoplay]}
         slidesPerView={6}

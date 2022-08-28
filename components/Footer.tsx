@@ -1,8 +1,9 @@
 import NextLink from 'next/link'
-import { FacebookIcon, LinkedinIcon, TwitterIcon, WhatsappIcon } from 'react-share'
+import { FacebookIcon, LinkedinIcon, WhatsappIcon } from 'react-share'
 import styled from 'styled-components'
 import Container from 'components/Container'
 import { media } from 'utils/media'
+import NextImage from 'next/image'
 
 type SingleFooterListItem = { title: string; href: string }
 type FooterListItems = SingleFooterListItem[]
@@ -74,6 +75,12 @@ export default function Footer() {
             <NextLink href="https://www.linkedin.com/company/lorenzo-y-asociados-sa" passHref>
               <a target="_blank" rel="noopener noreferrer">
                 <LinkedinIcon size={60} round={true} />
+              </a>
+            </NextLink>
+
+            <NextLink href="https://www.instagram.com/lorenzoyasociados/" passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <NextImage src="/instagram-circle-icon.jpg" width={60} height={60}></NextImage>
               </a>
             </NextLink>
           </ShareBar>

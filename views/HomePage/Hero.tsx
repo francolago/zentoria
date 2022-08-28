@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>El mejor estudio contable de San Miguel</CustomOverTitle>
+        <CustomOverTitle>Garantizamos tu tranquilidad</CustomOverTitle>
         <Heading>Simplificá tu contabilidad</Heading>
         <Description>
           Somos un estudio contable impositivo integral, orientado a actividades desarrolladas por empresas unipersonales, sociedades,
