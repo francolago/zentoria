@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export default function ColorSwitcher() {
   const { toggleTheme, colorMode } = useColorSwitcher()
+  if (colorMode === 'dark') toggleTheme()
 
   const sunIcon = (
     <svg viewBox="0 0 24 24" focusable="false">
@@ -33,7 +34,7 @@ export default function ColorSwitcher() {
 }
 
 const CustomButton = styled.button`
-  display: flex;
+  display: none;
   cursor: pointer;
   align-items: center;
   border: 0;
