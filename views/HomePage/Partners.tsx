@@ -5,86 +5,86 @@ import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Container from 'components/Container'
 import { media } from 'utils/media'
-import NextLink from 'next/link';
+import NextLink from 'next/link'
 
 type Partner = { imageUrl: string; href: string }
 
 const partners: Partner[] = [
   {
     "imageUrl": "Dartee.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/dar.tee/"
   },
   {
     "imageUrl": "Delta.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.deltahigiene.com.ar"
   },
   {
     "imageUrl": "Ermap .png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://erm-ap.com"
   },
   {
     "imageUrl": "FP INGENIERIA.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "http://www.fpingenieria.com.ar"
   },
   {
     "imageUrl": "GudD BIKE.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/gudbike/?hl=es"
   },
   {
     "imageUrl": "la raquel.jpeg",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/laraquel.sm/?hl=es"
   },
   {
     "imageUrl": "landi.jpeg",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.facebook.com/Ferreteria-LANDI-1633926833585761/"
   },
   {
     "imageUrl": "Las Zainas.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.laszainas.com.ar"
   },
   {
     "imageUrl": "navajas.jpeg",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/nvj_bellavista/?hl=es"
   },
   {
     "imageUrl": "ORV.jpeg",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/orv.alianzas/?hl=es"
   },
   {
     "imageUrl": "PAKKO.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/pakkofiesta/?hl=es"
   },
   {
     "imageUrl": "PAPEL ZONE.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.facebook.com/papelgroup/"
   },
   {
     "imageUrl": "Pakki.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/pizzapakko/?hl=es"
   },
   {
     "imageUrl": "Pizza uno.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/pizzaunolleve/?hl=es"
   },
   {
     "imageUrl": "americna implant.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "http://www.americanimplant.com"
   },
   {
     "imageUrl": "bulk gytm.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/bulkgym/?hl=es"
   },
   {
     "imageUrl": "di bona.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://dibona.com.ar"
   },
   {
     "imageUrl": "puerto sc.png",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.facebook.com/abastecedora.puertoseco/"
   },
   {
     "imageUrl": "seguras.jpeg",
-    "href": "https://www.estudiolorenzoasoc.com"
+    "href": "https://www.instagram.com/seguras.orv/"
   },
 ]
 
@@ -118,7 +118,8 @@ export default function Partners() {
               href={partner.href}
               passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <NextImage src={'/partners/' + partner.imageUrl} alt={normalizePartnerLogoName(partner.imageUrl)} width={128} height={128} />
+                <NextImage src={'/partners/' + partner.imageUrl} alt={normalizePartnerLogoName(partner.imageUrl)}
+                           width={128} height={128} />
               </a>
             </NextLink>
 
