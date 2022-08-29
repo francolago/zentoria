@@ -80,7 +80,7 @@ export default function Footer() {
 
             <NextLink href="https://www.instagram.com/lorenzoyasociados/" passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <NextImage src="/instagram-circle-icon.jpg" width={60} height={60}></NextImage>
+                <NextImage src="/instagram-circle-icon.png" width={60} height={60}></NextImage>
               </a>
             </NextLink>
           </ShareBar>
