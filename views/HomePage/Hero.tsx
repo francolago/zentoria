@@ -39,7 +39,10 @@ export default function Hero() {
       </Contents>
       <ImageContainer>
         {/*<HeroIllustration />*/}
-        <Image src="/logo-lorenzo-letras-abajo.png" width={625} height={500} />
+        <Image src="/landing/sueldos-y-jornales.jpg"
+               width={625}
+               height={500}
+        />
       </ImageContainer>
     </HeroWrapper>
   )

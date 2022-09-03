@@ -13,7 +13,7 @@ const TABS = [
     title: 'Asesoramiento Contable',
     description:
       '<p>Llevamos la contabilidad de su empresa. Nuestra función es medir y analizar la situación económica de su empresa con el objetivo de mejorar la gestión de la sociedad.</p>',
-    imageUrl: '/asesoramiento-contable.jpg',
+    imageUrl: '/landing/asesoramiento-contable.jpg',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
@@ -21,7 +21,7 @@ const TABS = [
     title: 'Asesoramiento Impositivo',
     description:
       '<p>Ayudamos a nuestros clientes a adoptar las formas y estructuras que les permitan operar con los menores costos impositivos dentro del marco legal disponible.</p>',
-    imageUrl: '/asesoramiento-impositivo.jpg',
+    imageUrl: '/landing/asesoramiento-impositivo.jpg',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
@@ -29,7 +29,7 @@ const TABS = [
     title: 'Sueldos y Jornales',
     description:
       '<p>Brindamos un asesoramiento integral o parcial dependiendo de las necesidades del cliente para acompañarlo en el proceso de liquidación de sueldos y jornales de sus empleados.</p>',
-    imageUrl: '/sueldos-y-jornales.jpg',
+    imageUrl: '/landing/sueldos-y-jornales.jpg',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },

@@ -22,7 +22,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Nos ajustamos a tus necesidades"
+          <BasicSection imageUrl="/landing/demo-illustration-1.svg" title="Nos ajustamos a tus necesidades"
                         overTitle="a tu manera">
             <p>
               Contamos con profesionales capacitados y comprometidos en ofrecer soluciones a nuestros clientes a la
@@ -30,7 +30,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
               necesidades.
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="Tenemos lo que necesitás" overTitle="soluciones"
+          <BasicSection imageUrl="/landing/demo-illustration-2.svg" title="Tenemos lo que necesitás" overTitle="soluciones"
                         reversed>
             <p>Nos motiva la búsqueda permanente de la satisfacción del cliente. Brindamos soluciones:</p>
             <ul>

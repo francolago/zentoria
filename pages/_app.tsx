@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               placeholder="Buenas! Quiero asesoramiento en..."
               notification={true}
               notificationSound={false}
-              avatar="logo-lorenzo-letras-abajo-blanco.png"
+              avatar="logo/logo-lorenzo-letras-abajo-blanco.png"
             />
           </Floating>
           <Component {...pageProps} />
