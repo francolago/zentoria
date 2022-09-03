@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { A11y, Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Container from 'components/Container'
-import Separator from 'components/Separator'
 import { media } from 'utils/media'
 
 const TESTIMONIALS = [
@@ -15,8 +14,8 @@ const TESTIMONIALS = [
     author: {
       name: 'José Pérez',
       title: 'Dueño de una PyME',
-      avatarUrl: '/testimonials/author-photo-1.jpeg',
-    },
+      avatarUrl: '/testimonials/author-photo-1.jpeg'
+    }
   },
   {
     companyLogoUrl: '/testimonials/company-logo-2.svg',
@@ -24,8 +23,8 @@ const TESTIMONIALS = [
     author: {
       name: 'Ariel Mirra',
       title: 'CEO de Drakatah',
-      avatarUrl: '/testimonials/author-photo-2.jpeg',
-    },
+      avatarUrl: '/testimonials/author-photo-2.jpeg'
+    }
   },
   {
     companyLogoUrl: '/testimonials/company-logo-3.svg',
@@ -33,30 +32,34 @@ const TESTIMONIALS = [
     author: {
       name: 'María Marta',
       title: 'Profesora particular',
-      avatarUrl: '/testimonials/author-photo-3.jpeg',
-    },
-  },
+      avatarUrl: '/testimonials/author-photo-3.jpeg'
+    }
+  }
 ]
 
 export default function Testimonials() {
   return (
     <div>
-      <Separator />
       <TestimonialsWrapper>
-        <Swiper modules={[Navigation, Autoplay, A11y]} slidesPerView={1} autoplay={{ delay: 4000 }} centeredSlides navigation loop>
+        <Swiper modules={[Navigation, Autoplay, A11y]} slidesPerView={1} autoplay={{ delay: 4000 }} centeredSlides
+                navigation loop>
           {TESTIMONIALS.map((singleTestimonial, idx) => (
             <SwiperSlide key={idx}>
               <TestimonialCard>
                 <NextImage
                   src={singleTestimonial.companyLogoUrl}
-                  alt={`${singleTestimonial.author.name}'s company logo`}
+                  alt={`${singleTestimonial.author.name} logo`}
                   width={200}
                   height={40}
                 />
                 <Content>“{singleTestimonial.content}”</Content>
                 <AuthorContainer>
                   <AuthorImageContainer>
-                    <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={48} height={48} />
+                    <NextImage src={singleTestimonial.author.avatarUrl}
+                               alt={singleTestimonial.author.name}
+                               width={48}
+                               height={48}
+                    />
                   </AuthorImageContainer>
                   <AuthorContent>
                     <AuthorName>{singleTestimonial.author.name}</AuthorName>
@@ -68,7 +71,6 @@ export default function Testimonials() {
           ))}
         </Swiper>
       </TestimonialsWrapper>
-      <Separator />
     </div>
   )
 }
