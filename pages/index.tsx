@@ -9,6 +9,7 @@ import FeaturesGallery from 'views/HomePage/FeaturesGallery'
 import Hero from 'views/HomePage/Hero'
 import Partners from 'views/HomePage/Partners'
 import Testimonials from 'views/HomePage/Testimonials'
+import Team from '../views/HomePage/Team';
 
 export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
@@ -43,6 +44,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <DarkerBackgroundContainer>
           <Cta />
           <FeaturesGallery />
+          <Team />
           <Testimonials />
           {/*<Features />*/}
         </DarkerBackgroundContainer>
