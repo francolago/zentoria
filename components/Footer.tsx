@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-import { FacebookIcon, LinkedinIcon, WhatsappIcon } from 'react-share'
 import styled from 'styled-components'
 import Container from 'components/Container'
 import { media } from 'utils/media'
@@ -62,25 +61,25 @@ export default function Footer() {
               href="https://api.whatsapp.com/send/?phone=+5491134482240&text=Buenos%20d%C3%ADas!%20Quisiera%20asesoramiento%20sobre"
               passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <WhatsappIcon size={60} round={true} />
+                <NextImage src="/social-logos/wp.png" width={45} height={45} />
               </a>
             </NextLink>
 
             <NextLink href="https://www.facebook.com/Lorenzoyasoc" passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <FacebookIcon size={60} round={true} />
+                <NextImage src="/social-logos/fb.png" width={45} height={45} />
               </a>
             </NextLink>
 
             <NextLink href="https://www.linkedin.com/company/lorenzo-y-asociados-sa" passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <LinkedinIcon size={60} round={true} />
+                <NextImage src="/social-logos/in.png" width={45} height={45} />
               </a>
             </NextLink>
 
             <NextLink href="https://www.instagram.com/lorenzoyasociados/" passHref>
               <a target="_blank" rel="noopener noreferrer">
-                <NextImage src="/instagram-circle-icon.png" width={60} height={60}></NextImage>
+                <NextImage src="/social-logos/ig.png" width={45} height={45} />
               </a>
             </NextLink>
           </ShareBar>
