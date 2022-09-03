@@ -6,11 +6,12 @@ import Container from 'components/Container'
 import OverTitle from 'components/OverTitle'
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context'
 import { media } from 'utils/media'
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image'
 
 export default function Hero() {
   const { setIsModalOpened } = useNewsletterModalContext()
+  const [ratio, setRatio] = useState(1280 / 854)
 
   return (
     <HeroWrapper>
@@ -18,7 +19,8 @@ export default function Hero() {
         <CustomOverTitle>Garantizamos tu tranquilidad</CustomOverTitle>
         <Heading>Simplificá tu contabilidad</Heading>
         <Description>
-          Somos un estudio contable impositivo integral, orientado a actividades desarrolladas por empresas unipersonales, sociedades,
+          Somos un estudio contable impositivo integral, orientado a actividades desarrolladas por empresas
+          unipersonales, sociedades,
           monotributistas, asociaciones sin fines de lucro, fundaciones, fideicomisos y constructoras.
         </Description>
         <CustomButtonGroup>
@@ -40,8 +42,12 @@ export default function Hero() {
       <ImageContainer>
         {/*<HeroIllustration />*/}
         <Image src="/landing/sueldos-y-jornales.jpg"
-               width={625}
-               height={500}
+               width={500}
+               height={500 / ratio}
+               layout="fixed"
+               onLoadingComplete={({ naturalWidth, naturalHeight }) =>
+                 setRatio(naturalWidth / naturalHeight)
+               }
         />
       </ImageContainer>
     </HeroWrapper>
@@ -50,6 +56,7 @@ export default function Hero() {
 
 const HeroWrapper = styled(Container)`
   display: flex;
+  justify-content: center;
   padding-top: 5rem;
 
   ${media('<=desktop')} {
@@ -74,20 +81,16 @@ const CustomButtonGroup = styled(ButtonGroup)`
 
 const ImageContainer = styled.div`
   display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: flex-start;
-
-  svg {
-    max-width: 45rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  
+  img {
+    border-radius: 0.8rem;
   }
 
-  ${media('<=desktop')} {
-    margin-top: 2rem;
-    justify-content: center;
-    svg {
-      max-width: 80%;
-    }
+  ${media('<=tablet')} {
+    display: none;
   }
 `
 
