@@ -1,4 +1,4 @@
-# Lorenzo y Asociados webpage
+# Zentoria
 
 ## Tech Stack
 made with:
