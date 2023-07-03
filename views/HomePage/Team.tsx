@@ -9,14 +9,14 @@ import { Card, CardContent, CardsContainer, ImageContainer } from 'components/Th
 
 const TABS = [
   {
-    title: 'Gabriel Lorenzo',
-    description: '<ul>' + '<li>50 años</li>' + '<li>Administrador de empresas UNLU</li>' + '</ul>',
-    imageUrl: '/team/gabriel-lorenzo.jpg'
+    title: 'Gabriel Lagomarsino',
+    description: '<ul>' + '<li>+30 años de experiencia en Project Management</li>' + '<li>MBA, UCEMA</li>' + '</ul>',
+    imageUrl: '/team/Gabriel-Lagomarsino.jpg'
   },
   {
-    title: 'Daniel Lorenzo',
-    description: '<ul>' + '<li>57 años</li>' + '<li>contador publico UBA</li>' + '</ul>',
-    imageUrl: '/team/daniel-lorenzo.jpg'
+    // title: 'Daniel Lorenzo',
+    // description: '<ul>' + '<li>57 años</li>' + '<li>contador publico UBA</li>' + '</ul>',
+    // imageUrl: '/team/daniel-lorenzo.jpg'
   }
   // {
   //   title: 'Federico y Matías Lorenzo',
