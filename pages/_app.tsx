@@ -69,14 +69,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <Floating>
             <FloatingWhatsApp
-              phoneNumber="+5491134482240"
-              accountName="Estudio Lorenzo"
+              phoneNumber="+5491144486717"
+              accountName="Zentoria Consulting"
               statusMessage="Usualmente responde en menos de 1 hora"
               chatMessage="Buenos días! Cómo podemos ayudarte?"
               placeholder="Buenas! Quiero asesoramiento en..."
               notification={true}
               notificationSound={false}
-              avatar="logo/logo-lorenzo-letras-abajo-blanco.png"
+              avatar="logo/zentoria.jpg"
             />
           </Floating>
           <Component {...pageProps} />
