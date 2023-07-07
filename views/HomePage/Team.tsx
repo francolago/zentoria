@@ -12,12 +12,12 @@ const TABS = [
     title: 'Gabriel Lagomarsino',
     description: '<ul>' + '<li>+30 años de experiencia en Project Management</li>' + '<li>MBA, UCEMA</li>' + '</ul>',
     imageUrl: '/team/Gabriel-Lagomarsino.jpg'
-  },
-  {
+  }
+  //{
     // title: 'Daniel Lorenzo',
     // description: '<ul>' + '<li>57 años</li>' + '<li>contador publico UBA</li>' + '</ul>',
     // imageUrl: '/team/daniel-lorenzo.jpg'
-  }
+  //}
   // {
   //   title: 'Federico y Matías Lorenzo',
   //   description:
