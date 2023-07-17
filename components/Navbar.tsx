@@ -69,14 +69,14 @@ export default function Navbar({ items }: NavbarProps) {
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Image alt="logo lorenzo" src="/logo/main-logo.gif" width={260} height={130} />
+            <Image alt="logo zentoria" src="/logo/main-logo.gif" width={260} height={130} />
           </LogoWrapper>
         </NextLink>
-        <NavItemList>
+        {/* <NavItemList>
           {items.map((singleItem) => (
             <NavItem key={singleItem.href} {...singleItem} />
           ))}
-        </NavItemList>
+        </NavItemList> */}
         <ColorSwitcherContainer>
           <ColorSwitcher />
         </ColorSwitcherContainer>

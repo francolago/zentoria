@@ -43,12 +43,15 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                 {hasSignedUp && <MailSentState />}
                 {!hasSignedUp && (
                   <>
-                    <Title>Estas preparado para suscribirte al mejor newsletter del mundo?</Title>
+                    <Title>Datos de contacto</Title>
+                    <SecondaryTitle>WhatsApp: +5491155779777 </SecondaryTitle>
+                    <SecondaryTitle>Mail: gabriel.lagomarsino@zentoria.com.ar</SecondaryTitle>
+
                     <Row>
                       <CustomInput
                         value={email}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                        placeholder="Dejanos tu email..."
+                        placeholder="O si lo preferis, dejanos tu email..."
                         required
                       />
                       <CustomButton as="button" type="submit" disabled={hasSignedUp}>
@@ -56,6 +59,7 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                       </CustomButton>
                     </Row>
                     {message && <ErrorMessage dangerouslySetInnerHTML={{ __html: message as string }} />}
+
                   </>
                 )}
               </Card>
@@ -98,6 +102,18 @@ const CloseIconContainer = styled.div`
 const Title = styled.div`
   font-size: 3.2rem;
   font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: rgb(var(--text));
+  padding-bottom: 15px;
+  ${media('<=tablet')} {
+    font-size: 2.6rem;
+  }
+`
+const SecondaryTitle = styled.div`
+  padding-top: 10px;
+  font-size: 1.8rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
   text-align: center;

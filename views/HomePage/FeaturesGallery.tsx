@@ -10,28 +10,36 @@ import { media } from 'utils/media'
 
 const TABS = [
   {
-    title: 'Asesoramiento Contable',
+    title: 'Gestión de proyectos:',
     description:
-      '<p>Llevamos la contabilidad de su empresa. Nuestra función es medir y analizar la situación económica de su empresa con el objetivo de mejorar la gestión de la sociedad.</p>',
+      '<p>Project Management es un eslabón fundamental para garantizar el éxito de sus proyectos, finalizándolos en tiempo y dentro de su presupuesto. <br/>En Zentoria tenemos amplísima experiencia en gestionar proyectos de distinta envergadura, así como de diferente naturaleza (y en ese camino, hemos implementado exitosamente 2  Oficinas de Dirección de Proyectos). <br/>Podemos encargarnos de la evaluación de un negocio, la implementación de un sistema de información, o la planeación y administración de todo un programa, o de un proyecto de inversión de capital o de mejora, utilizando la Metodología del PMI (Project Management Institute).<br/> También ofrecemos hacernos cargo de la Dirección de sus proyectos, liberando así sus propios recursos de una actividad para la que generalmente no hay "holgura" para encararla con colaboradores internos.</p>',
     imageUrl: '/landing/asesoramiento-contable.jpg',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Asesoramiento Impositivo',
+    title: 'Mejora de procesos:',
     description:
-      '<p>Ayudamos a nuestros clientes a adoptar las formas y estructuras que les permitan operar con los menores costos impositivos dentro del marco legal disponible.</p>',
+      '<p>Realizamos consultoría en diseño, rediseño, implementación y control de procesos de negocio, tanto sean de empresas industriales, comerciales o de servicios.<br/>Optimizamos sus costos operativos, trabajando tanto sobre la cadena de abastecimiento, como en los procesos internos, analizando en cada caso la conveniencia de efectuar alianzas, integrar procesos o tercerizarlos.<br/>Alineamos sus estrategias de negocio con los procesos y la tecnología de su organización: sabemos que en el cambiante mundo de hoy, escoger la tecnología apropiada es una tarea fundamental.</p>',
     imageUrl: '/landing/asesoramiento-impositivo.jpg',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'Sueldos y Jornales',
+    title: 'Habilitaciones municipales:',
     description:
-      '<p>Brindamos un asesoramiento integral o parcial dependiendo de las necesidades del cliente para acompañarlo en el proceso de liquidación de sueldos y jornales de sus empleados.</p>',
+      '<p>Agilizamos el proceso de obtención de habilitaciones municipales, brindándote el apoyo necesario para cumplir con los requisitos y regulaciones locales.</p>',
     imageUrl: '/landing/sueldos-y-jornales.jpg',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
+  },
+  {
+    title: 'Benchmarking:',
+    description:
+      '<p>Realizamos el diseño e implementación de Benchmarks de eficiencia operativa. El Benchmarking es una técnica utilizada para medir el rendimiento de toda una organización o de una parte de ella, en comparación con sus pares de la industria (el mercado en el que desarrolla sus operaciones).</p>',
+    imageUrl: '/landing/stock-img02.avif',
+    baseColor: '255, 255, 0',
+    secondColor: '230, 230, 0',
   },
 ]
 
@@ -77,7 +85,7 @@ export default function FeaturesGallery() {
     <FeaturesGalleryWrapper>
       <Content>
         <OverTitle>Servicios</OverTitle>
-        <SectionTitle>¿Qué ofrecemos?</SectionTitle>
+        <SectionTitle>¿Cómo podemos ayudarte?</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

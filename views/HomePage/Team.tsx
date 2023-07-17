@@ -6,17 +6,19 @@ import OverTitle from 'components/OverTitle'
 import SectionTitle from 'components/SectionTitle'
 import { media } from 'utils/media'
 import { Card, CardContent, CardsContainer, ImageContainer } from 'components/ThemeStyles'
+import { padding } from 'polished'
 
 const TABS = [
   {
     title: 'Gabriel Lagomarsino',
-    description: '<ul>' + '<li>+30 años de experiencia en Project Management</li>' + '<li>MBA, UCEMA</li>' + '</ul>',
+    // description: '<p>Experimentado Project Manager con más de 30 años de experiencia, especialista en metodologías ágiles, experto en Planificación y Control, Mejora de Procesos y liderazgo de equipos multidisciplinarios.<p/>',
+    description: '<ul>' + '<li>+30 años de experiencia en Project Management</li>' + '<li>Especialista en metodologías ágiles, experto en Planificación, Control y Mejora de Procesos</li>' + '<li>MBA, UCEMA</li>' + '</ul>',
     imageUrl: '/team/Gabriel-Lagomarsino.jpg'
   }
   //{
-    // title: 'Daniel Lorenzo',
-    // description: '<ul>' + '<li>57 años</li>' + '<li>contador publico UBA</li>' + '</ul>',
-    // imageUrl: '/team/daniel-lorenzo.jpg'
+  // title: 'Daniel Lorenzo',
+  // description: '<ul>' + '<li>57 años</li>' + '<li>contador publico UBA</li>' + '</ul>',
+  // imageUrl: '/team/daniel-lorenzo.jpg'
   //}
   // {
   //   title: 'Federico y Matías Lorenzo',
@@ -37,13 +39,13 @@ export default function Team() {
         <h3>{singleTab.title}</h3>
         <ImageContainer>
           <NextImage src={singleTab.imageUrl}
-                     alt={singleTab.title}
-                     width={200}
-                     height={200 / ratio}
-                     layout="fixed"
-                     onLoadingComplete={({ naturalWidth, naturalHeight }) =>
-                       setRatio(naturalWidth / naturalHeight)
-                     }
+            alt={singleTab.title}
+            width={200}
+            height={200 / ratio}
+            layout="fixed"
+            onLoadingComplete={({ naturalWidth, naturalHeight }) =>
+              setRatio(naturalWidth / naturalHeight)
+            }
           />
         </ImageContainer>
         <CardContent>
@@ -56,7 +58,7 @@ export default function Team() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>El equipo</OverTitle>
+        {/* <OverTitle>El equipo</OverTitle> */}
         <SectionTitle>¿Quienes somos?</SectionTitle>
       </Content>
       <GalleryWrapper>

@@ -24,11 +24,11 @@ export default function Cta() {
                 Contactanos <span>&rarr;</span>
               </Button>
             </NextLink>
-            <NextLink href="features" passHref>
+            {/* <NextLink href="features" passHref>
               <OutlinedButton transparent>
                 Servicios <span>&rarr;</span>
               </OutlinedButton>
-            </NextLink>
+            </NextLink> */}
           </ButtonGroup>
         </Stack>
       </Container>

@@ -56,7 +56,7 @@ export default function Footer() {
         {/*  ))}*/}
         {/*</ListContainer>*/}
         <BottomBar>
-          <ShareBar>
+          {/* <ShareBar>
             <NextLink
               href="https://api.whatsapp.com/send/?phone=+5491134482240&text=Buenos%20d%C3%ADas!%20Quisiera%20asesoramiento%20sobre"
               passHref>
@@ -82,8 +82,8 @@ export default function Footer() {
                 <NextImage src="/social-logos/ig.png" width={45} height={45} />
               </a>
             </NextLink>
-          </ShareBar>
-          <Copyright>&copy; Copyright 2022 Lorenzo y Asociados S.A.</Copyright>
+          </ShareBar> */}
+          <Copyright>&copy; Copyright 2022 Zentoria S.A.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>

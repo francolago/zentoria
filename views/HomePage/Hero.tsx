@@ -16,20 +16,11 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>Garantizamos tu tranquilidad</CustomOverTitle>
-        <Heading>Simplificá tu contabilidad</Heading>
-        <Description>
-          Somos un estudio contable impositivo integral, orientado a actividades desarrolladas por empresas
-          unipersonales, sociedades,
-          monotributistas, asociaciones sin fines de lucro, fundaciones, fideicomisos y constructoras.
-        </Description>
-        <Subheading>Consultoría Empresarial </Subheading>
+        <CustomOverTitle>Project Management | Process Improvement | Habilitaciones</CustomOverTitle>
+        <Heading>Consultoría Empresarial</Heading>
         <Description>
           Más de 20 años de experiencia en consultoría, gestión de proyectos, mejora de procesos, habilitaciones, y capacitaciones in company.
         </Description>
-
-        <ListItem>Project Management | Process Improvement | Habilitaciones</ListItem>
-
         <CustomButtonGroup>
           {/*<Button onClick={() => setIsModalOpened(true)}>*/}
           {/*  Subscribe to the newsletter <span>&rarr;</span>*/}
@@ -39,16 +30,16 @@ export default function Hero() {
               Contactanos <span>&rarr;</span>
             </Button>
           </NextLink>
-          <NextLink href="features" passHref>
+          {/* <NextLink href="features" passHref>
             <Button transparent>
               Servicios <span>&rarr;</span>
             </Button>
-          </NextLink>
+          </NextLink> */}
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
         {/*<HeroIllustration />*/}
-        <Image src="/landing/sueldos-y-jornales.jpg"
+        <Image src="/landing/hero-bg.jpg"
           width={500}
           height={500 / ratio}
           layout="fixed"

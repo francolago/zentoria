@@ -15,7 +15,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
     <>
       <Head>
         <title>{EnvVars.SITE_NAME}</title>
-        <meta name="description" content="Estudio contable lorenzo y asociados" />
+        <meta name="description" content="Zentoria: consultoria empresarial" />
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>

@@ -5,7 +5,11 @@ export default function InformationSection() {
     <Wrapper>
       <h3>Información de contacto</h3>
       <p>
-        <span>Email:</span> administracion@estudiolorenzoasoc.com
+        <span>whatsapp: +5491155779777</span>
+      </p>
+      <br />
+      <p>
+        <span>Email:</span> gabriel.lagomarsino@zentoria.com.ar
       </p>
     </Wrapper>
   )

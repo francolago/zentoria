@@ -24,13 +24,13 @@ export default function WaveCta() {
           <Title>Conocé más sobre nosotros y en qué te podemos ayudar</Title>
           <CustomButtonGroup>
             <Button onClick={() => setIsModalOpened(true)}>
-              Dejanos tu mail <span>&rarr;</span>
+              Datos de contacto <span>&rarr;</span>
             </Button>
-            <NextLink href="/features" passHref>
+            {/* <NextLink href="/features" passHref>
               <OutlinedButton transparent>
                 Servicios <span>&rarr;</span>
               </OutlinedButton>
-            </NextLink>
+            </NextLink> */}
           </CustomButtonGroup>
         </Container>
       </CtaWrapper>
